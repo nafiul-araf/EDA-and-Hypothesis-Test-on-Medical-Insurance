@@ -42,3 +42,69 @@ This project aims to analyze a medical insurance dataset to uncover factors infl
     - Used a joint plot to observe the joint distribution and correlation between age and BMI.
     - Created a pair plot to visualize pairwise relationships between variables with respect to sex.
     - **Insight**: These visualizations uncover patterns in age, BMI, and insurance features, which could point toward key factors impacting charges.
+
+
+### 3. Hypothesis Testing (Summarize)
+- **Aim**: To statistically validate relationships and differences between categorical variables, BMI, and charges in the dataset. This helps determine if observed patterns are significant or due to random chance.
+
+#### A. Chi-Square Test for Independence
+  - **Objective**: To test if there is a significant association between categorical variables.
+  - **Steps**:
+    - Conducted chi-square tests between:
+      - `sex` and `smoker` status.
+      - `sex` and `region`.
+      - `smoker` status and `region`.
+    - **Insight**: These tests determine if being a smoker, region, or gender is independent of each other in the dataset.
+
+#### B. Type II Error Assessment
+  - **Objective**: To check the potential of incorrectly failing to reject a false null hypothesis by analyzing ratios in different regions.
+  - **Steps**:
+    - Calculated the ratio of male to female patients and non-smokers to smokers for each region.
+    - **Insight**: Helps in understanding the distribution of these subgroups across different regions.
+
+#### C. One-Sample T-Test
+  - **Objective**: To determine if the BMI mean of specific subgroups differs significantly from the overall mean.
+  - **Steps**:
+    - Conducted one-sample t-tests for:
+      - BMI by `sex` (female and male).
+      - BMI by `smoker` status (yes and no).
+      - BMI for each `region` (e.g., southwest, southeast).
+    - **Insight**: Shows if the BMI for each group deviates significantly from the population mean.
+
+#### D. Two-Sample T-Test
+  - **Objective**: To compare the mean BMI between two independent groups.
+  - **Steps**:
+    - Compared BMI between:
+      - Female and male patients.
+      - Smokers and non-smokers.
+    - **Insight**: Identifies if there are significant BMI differences between genders or smoking status.
+
+#### E. Paired T-Test
+  - **Objective**: To assess if there is a significant mean difference in `age` between pairs of groups.
+  - **Steps**:
+    - Conducted paired t-tests between:
+      - Female and male patients.
+      - Smokers and non-smokers.
+    - **Insight**: Checks if age distribution varies significantly between these paired groups.
+
+#### F. Normality Testing and Standardization
+  - **Objective**: To confirm if the BMI distribution is normal and to standardize it.
+  - **Steps**:
+    - Normalized BMI data using Box-Cox transformation.
+    - Verified normality with a Shapiro-Wilk test.
+    - Calculated mean and standard deviation of the normalized BMI.
+    - **Insight**: Ensures that the data meets assumptions for further tests and analysis.
+
+#### G. Z-Tests
+  - **Objective**: To compare the mean BMI or cost between two populations.
+  - **Steps**:
+    - Conducted one-sample z-tests for BMI of new samples against the original.
+    - Conducted a two-sample z-test to compare costs between female and male patients.
+    - **Insight**: Highlights significant differences between groups for specified measures.
+
+#### H. ANOVA Test
+  - **Objective**: To compare mean BMI across multiple groups to see if there is a significant difference.
+  - **Steps**:
+    - Performed one-way ANOVA for BMI by `sex`.
+    - Conducted a two-way ANOVA to analyze BMI differences by `sex` and `region`.
+    - **Insight**: Indicates if multiple groups have statistically different mean BMIs.
