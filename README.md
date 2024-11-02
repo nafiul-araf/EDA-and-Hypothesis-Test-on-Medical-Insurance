@@ -44,7 +44,7 @@ This project aims to analyze a medical insurance dataset to uncover factors infl
     - **Insight**: These visualizations uncover patterns in age, BMI, and insurance features, which could point toward key factors impacting charges.
 
 
-### 3. Hypothesis Testing (Summarize)
+### 3. Hypothesis Testing (Summarize->Details on the notebook)
 - **Aim**: To statistically validate relationships and differences between categorical variables, BMI, and charges in the dataset. This helps determine if observed patterns are significant or due to random chance.
 
 #### A. Chi-Square Test for Independence
