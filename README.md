@@ -107,4 +107,4 @@ This project aims to analyze a medical insurance dataset to uncover factors infl
   - **Steps**:
     - Performed one-way ANOVA for BMI by `sex`.
     - Conducted a two-way ANOVA to analyze BMI differences by `sex` and `region`.
-    - **Insight**: Indicates if multiple groups have statistically different mean BMIs.
+    - **Insight**: Indicates if multiple groups have statistically different mean `BMI`s.
